@@ -108,20 +108,20 @@ const Calender = () => {
         <div>
             <CssBaseline />
             <Container maxWidth="lg">
-                <Box sx={{ bgcolor: '#dcd3d3', height: 'fit-content', width: '100%' }} >
+                <Box sx={{ bgcolor: '#f3d89f', height: 'fit-content', width: '100%' }} >
                     <Stack
                         direction={{ xs: 'column', sm: 'row' }}
                         spacing={{ xs: 1, sm: 2, md: 4 }}
                         justifyContent={'space-between'}
                         padding={5}
                     >
-                        <Button variant="contained" onClick={goToPreviousWeek} >
+                        <Button variant="contained" color="success"  onClick={goToPreviousWeek} >
                             Prev Week
                         </Button>
                         <h4 style={{
                             textDecoration: "underline  blue"
                         }} >{getCurrentDate()}</h4>
-                        <Button variant="contained" onClick={goToNextWeek} >
+                        <Button variant="contained" color="success"  onClick={goToNextWeek} >
                             Next Week
                         </Button>
                     </Stack>
@@ -130,7 +130,7 @@ const Calender = () => {
                         spacing={{ xs: 1, sm: 2, md: 4 }}
                         padding={5}
                     >
-                        <InputLabel style={{ textAlign: 'start' }} id="demo-simple-select-label">Example</InputLabel>
+                        <InputLabel style={{ textAlign: 'start'}}   id="demo-simple-select-label">Example</InputLabel>
                         {TimeCheckboxGenerator()}
                     </Stack>
 

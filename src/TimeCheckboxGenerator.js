@@ -96,7 +96,7 @@ const handleSubmit = async (event,formattedTime,formattedApiDate) => {
       console.log(getValueCheck()[0]?.checkData,"dsagfadsg")
 
       checkboxes.push(
-        <div  key={formattedTime}>
+        <div  key={formattedTime} >
           <input type="checkbox"  name="checkDatas"  checked={(getValueCheck()[0]?.checkData)} onChange={(e)=>handleSubmit(e,formattedTime,formattedApiDate)} id={formattedTime} />
           <label htmlFor={formattedTime}>{formattedTime}</label>
           <br />
@@ -121,8 +121,8 @@ console.log(date);
 
 
   return (
-    <Stack direction="row" spacing={2} >
-      {formattedApiDate < date?"past":generateTimeIntervals(selectedTimeZone)}
+    <Stack  direction="row" spacing={2} >
+      {formattedApiDate < date ? "past" : generateTimeIntervals(selectedTimeZone)}
     </Stack>
   );
 }
